@@ -1,0 +1,2 @@
+# Magical Girl Pastel Starshower
+This is a early development visual novel game about a semi-retired magical girl trying to live a normal life. It's built in the [Ren'Py](https://www.renpy.org/) engine.
