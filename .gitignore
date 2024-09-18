@@ -1,0 +1,22 @@
+### Renpy ###
+# Don't track content of these folders
+cache/
+saves/
+
+# Do'n't track compiled source
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+*.rpyc
+*.rpymc
+
+
+# Don't track log files and other misc things
+log.txt
+errors.txt
+traceback.txt
+files.txt
