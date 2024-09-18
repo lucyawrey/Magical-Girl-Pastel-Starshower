@@ -4,25 +4,15 @@
 # name of the character.
 
 define s = Character("Stella", color="#fff704")
-define l = Character("Lucy", color="#292ce6")
+define l = Character("Lucy", color="#8129e6")
+define sl = Character("Stella and Lucy", color="#ffffff")
+define m = Character("Miku", color="#4690ff")
 
 # The game starts here.
 
 label start:
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
-#    scene bg room
-
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
-#    show eileen happy
-
-    # These display lines of dialogue.
+#   scene bg room
 
     s "Wow, It's really really dark in here."
 
@@ -42,6 +32,61 @@ label start:
 
     s "Yeah she totes is."
 
-    # This ends the game.
+    show miku
 
-    return
+    m "Hi!"
+
+    sl "AHHHHH!!!!"
+
+    m "Hehe, did I scare you?"
+
+    menu:
+
+        "Yes!":
+            jump choiceScared_yes
+
+        "Nah.":
+            jump choiceScared_no
+
+label choiceScared_yes:
+
+    $ scared_flag = True
+
+    m "Good! I thought it might be fun to sneak up on you."
+
+    jump choice1_done
+
+label choiceScared_no:
+
+    $ scared_flag = False
+
+    m "Aww... I was hoping I would just a little. It's probably for the best though."
+
+    jump choice1_done
+
+label choice1_done:
+
+    l "Okay."
+
+    if scared_flag:
+        l "I'm feeling pretty anxious now, but..."
+    else:
+        l "Anyways..."
+
+    l "We should probably move onto the meeting."
+
+    m "I agree--"
+
+    s "Backup for a moment. How the heck can we see you in this darkness, Miku?"
+
+    m "All the world is my stage, so I can be seen even in total darkness!"
+
+    sl "..."
+    
+    m "And also because Lucy liberated an asset of me to use, if you'll allow me to step out of the narritive for a moment."
+
+    s "Ahhh. So, the meeting?"
+
+# This ends the game.
+
+return
