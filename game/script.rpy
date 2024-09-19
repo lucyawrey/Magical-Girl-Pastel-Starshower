@@ -30,13 +30,24 @@ label start:
    
     "Halfway down—only around three seconds of falling—there is a flash of light and Stella is wearing a dress of radiant white, blue and yellow."
 
+    stop music fadeout 1.0
     play sound "sfx-land.mp3"
 
     scene black
 
+    "In three more seconds she slams into the ground with a heavy crunch, having landing in a slight crouch completely unharmed. Her dress disappears into tiny motes of light that mix with the dust kicked up by her landing."
+
+    scene bg street
+
     play music "power-of-the-wind.mp3"
 
-    "In three more seconds she slams into the ground with a heavy crunch, having landing in a slight crouch completely unharmed. Her dress disappears into tiny motes of light that mix with the dust kicked up by her landing."
+    show miku
+
+    stella "Nothing like a good fifty-story fall to wake me up in the morning!"
+
+    "—"
+
+    "That's all for now! More coming soon."
 
 # This ends the game.
 return
