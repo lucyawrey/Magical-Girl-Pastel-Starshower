@@ -1,92 +1,42 @@
-﻿# The script of the game goes in this file.
+﻿# Declare characters used by this game. The color argument
+# colorizes the name of the character.
 
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
+define stella = Character("Stella", color="#fff704")
+define mgps = Character("Magical Girl Pastel Starshower", color="#fffcb0")
+define saoirse = Character("Saoirse", color="#890098")
+define mgvh = Character("Magical Girl Void Heart", color="#400147")
 
-define s = Character("Stella", color="#fff704")
-define l = Character("Lucy", color="#8129e6")
-define sl = Character("Stella and Lucy", color="#ffffff")
-define m = Character("Miku", color="#4690ff")
+define _scene_show_hide_transition = Dissolve(0.25)
 
 # The game starts here.
-
 label start:
+    play music "morning.mp3"
 
-#   scene bg room
+    "It's half past ten in the morning and the most dangerous being on planet Earth is quite late for work."
 
-    s "Wow, It's really really dark in here."
-
-    l "Yeah, we don't have any assets yet so everything has to take place in the dark."
-
-    s "Wow that sucks."
-
-    l "Sorry... I'm trying my best okay."
-
-    s "Wasn't blaming you, just expressing a sentiment."
-
-    l "That's fair haha, sorry for being a bit insecure."
-
-    s "It's okay! I like you as you are."
-
-    l "Isn't my girlfriend really cute by the way?"
-
-    s "Yeah she totes is."
-
-    show miku
-
-    m "Hi!"
-
-    sl "AHHHHH!!!!"
-
-    m "Hehe, did I scare you?"
-
-    menu:
-
-        "Yes!":
-            jump choiceScared_yes
-
-        "Nah.":
-            jump choiceScared_no
-
-label choiceScared_yes:
-
-    $ scared_flag = True
-
-    m "Good! I thought it might be fun to sneak up on you."
-
-    jump choice1_done
-
-label choiceScared_no:
-
-    $ scared_flag = False
-
-    m "Aww... I was hoping I would just a little. It's probably for the best though."
-
-    jump choice1_done
-
-label choice1_done:
-
-    l "Okay."
-
-    if scared_flag:
-        l "I'm feeling pretty anxious now, but..."
-    else:
-        l "Anyways..."
-
-    l "We should probably move onto the meeting."
-
-    m "I agree--"
-
-    s "Backup for a moment. How the heck can we see you in this darkness, Miku?"
-
-    m "All the world is my stage, so I can be seen even in total darkness!"
-
-    sl "..."
+    scene bg bathroom
     
-    m "And also because Lucy liberated an asset of me to use, if you'll allow me to step out of the narritive for a moment."
+    "The being in question is a girl named Stella—short for either \“Estelle\” or \“Pastel Starshower\” depending on who you ask—who is currently standing in her bathroom trying to get her perpetually messy, platinum blonde hair into some sense of order."
 
-    s "Ahhh. So, the meeting?"
+    scene bg bedroom
+
+    "Once she is confident she's done the best she can without resorting to magic, she brushes her teeth, walks to her bedroom, changes into an outfit looted from the floor, slips through the sliding door across from her bed, and jumps off the balcony."
+
+    scene bg fall
+
+    play music "woosh.mp3"
+
+    "She smiles as she feels the near weightlessness of freefall and the wind rushing towards and past her, ruining any progress she'd made on her hair in the process."
+   
+    "Halfway down—only around three seconds of falling—there is a flash of light and Stella is wearing a dress of radiant white, blue and yellow."
+
+    play sound "sfx-land.mp3"
+
+    scene black
+
+    play music "power-of-the-wind.mp3"
+
+    "In three more seconds she slams into the ground with a heavy crunch, having landing in a slight crouch completely unharmed. Her dress disappears into tiny motes of light that mix with the dust kicked up by her landing."
 
 # This ends the game.
-
 return

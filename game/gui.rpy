@@ -87,8 +87,8 @@ define gui.title_text_size = 75
 ## Main and Game Menus #########################################################
 
 ## The images used for the main and game menus.
-define gui.main_menu_background = "images/guimain_menu.png"
-define gui.game_menu_background = "images/guigame_menu.png"
+define gui.main_menu_background = "images/gui/main_menu.png"
+define gui.game_menu_background = "images/gui/game_menu.png"
 
 
 ## Dialogue ####################################################################
@@ -143,7 +143,7 @@ define gui.dialogue_text_xalign = 0.0
 
 ## Buttons #####################################################################
 ##
-## These variables, along with the image files in images/guibutton, control aspects of
+## These variables, along with the image files in images/gui/button, control aspects of
 ## how buttons are displayed.
 
 ## The width and height of a button, in pixels. If None, Ren'Py computes a size.
@@ -220,7 +220,7 @@ define gui.choice_button_text_insensitive_color = '#8888887f'
 ##
 ## A file slot button is a special kind of button. It contains a thumbnail
 ## image, and text describing the contents of the save slot. A save slot uses
-## image files in images/guibutton, like the other kinds of buttons.
+## image files in images/gui/button, like the other kinds of buttons.
 
 ## The save slot button.
 define gui.slot_button_width = 414

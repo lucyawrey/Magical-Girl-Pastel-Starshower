@@ -23,7 +23,7 @@ define gui.show_name = True
 
 ## The version of the game.
 
-define config.version = "1.0"
+define config.version = "0.1"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
@@ -150,7 +150,7 @@ define config.save_directory = "MagicalGirlPastelStarshower-1726631425"
 ##
 ## The icon displayed on the taskbar or dock.
 
-define config.window_icon = "images/guiwindow_icon.png"
+define config.window_icon = "images/gui/window_icon.png"
 
 
 ## Build configuration #########################################################
