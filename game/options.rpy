@@ -150,7 +150,7 @@ define config.save_directory = "MagicalGirlPastelStarshower-1726631425"
 ##
 ## The icon displayed on the taskbar or dock.
 
-define config.window_icon = "gui/window_icon.png"
+define config.window_icon = "images/guiwindow_icon.png"
 
 
 ## Build configuration #########################################################

@@ -42,38 +42,38 @@ style prompt_text is gui_text:
 
 style bar:
     ysize gui.bar_size
-    left_bar Frame("gui/bar/left.png", gui.bar_borders, tile=gui.bar_tile)
-    right_bar Frame("gui/bar/right.png", gui.bar_borders, tile=gui.bar_tile)
+    left_bar Frame("images/guibar/left.png", gui.bar_borders, tile=gui.bar_tile)
+    right_bar Frame("images/guibar/right.png", gui.bar_borders, tile=gui.bar_tile)
 
 style vbar:
     xsize gui.bar_size
-    top_bar Frame("gui/bar/top.png", gui.vbar_borders, tile=gui.bar_tile)
-    bottom_bar Frame("gui/bar/bottom.png", gui.vbar_borders, tile=gui.bar_tile)
+    top_bar Frame("images/guibar/top.png", gui.vbar_borders, tile=gui.bar_tile)
+    bottom_bar Frame("images/guibar/bottom.png", gui.vbar_borders, tile=gui.bar_tile)
 
 style scrollbar:
     ysize gui.scrollbar_size
-    base_bar Frame("gui/scrollbar/horizontal_[prefix_]bar.png", gui.scrollbar_borders, tile=gui.scrollbar_tile)
-    thumb Frame("gui/scrollbar/horizontal_[prefix_]thumb.png", gui.scrollbar_borders, tile=gui.scrollbar_tile)
+    base_bar Frame("images/guiscrollbar/horizontal_[prefix_]bar.png", gui.scrollbar_borders, tile=gui.scrollbar_tile)
+    thumb Frame("images/guiscrollbar/horizontal_[prefix_]thumb.png", gui.scrollbar_borders, tile=gui.scrollbar_tile)
 
 style vscrollbar:
     xsize gui.scrollbar_size
-    base_bar Frame("gui/scrollbar/vertical_[prefix_]bar.png", gui.vscrollbar_borders, tile=gui.scrollbar_tile)
-    thumb Frame("gui/scrollbar/vertical_[prefix_]thumb.png", gui.vscrollbar_borders, tile=gui.scrollbar_tile)
+    base_bar Frame("images/guiscrollbar/vertical_[prefix_]bar.png", gui.vscrollbar_borders, tile=gui.scrollbar_tile)
+    thumb Frame("images/guiscrollbar/vertical_[prefix_]thumb.png", gui.vscrollbar_borders, tile=gui.scrollbar_tile)
 
 style slider:
     ysize gui.slider_size
-    base_bar Frame("gui/slider/horizontal_[prefix_]bar.png", gui.slider_borders, tile=gui.slider_tile)
-    thumb "gui/slider/horizontal_[prefix_]thumb.png"
+    base_bar Frame("images/guislider/horizontal_[prefix_]bar.png", gui.slider_borders, tile=gui.slider_tile)
+    thumb "images/guislider/horizontal_[prefix_]thumb.png"
 
 style vslider:
     xsize gui.slider_size
-    base_bar Frame("gui/slider/vertical_[prefix_]bar.png", gui.vslider_borders, tile=gui.slider_tile)
-    thumb "gui/slider/vertical_[prefix_]thumb.png"
+    base_bar Frame("images/guislider/vertical_[prefix_]bar.png", gui.vslider_borders, tile=gui.slider_tile)
+    thumb "images/guislider/vertical_[prefix_]thumb.png"
 
 
 style frame:
     padding gui.frame_borders.padding
-    background Frame("gui/frame.png", gui.frame_borders, tile=gui.frame_tile)
+    background Frame("images/guiframe.png", gui.frame_borders, tile=gui.frame_tile)
 
 
 
@@ -136,7 +136,7 @@ style window:
     yalign gui.textbox_yalign
     ysize gui.textbox_height
 
-    background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
+    background Image("images/guitextbox.png", xalign=0.5, yalign=1.0)
 
 style namebox:
     xpos gui.name_xpos
@@ -145,7 +145,7 @@ style namebox:
     ypos gui.name_ypos
     ysize gui.namebox_height
 
-    background Frame("gui/namebox.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+    background Frame("images/guinamebox.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
     padding gui.namebox_borders.padding
 
 style say_label:
@@ -385,7 +385,7 @@ style main_menu_frame:
     xsize 420
     yfill True
 
-    background "gui/overlay/main_menu.png"
+    background "images/guioverlay/main_menu.png"
 
 style main_menu_vbox:
     xalign 1.0
@@ -501,7 +501,7 @@ style game_menu_outer_frame:
     bottom_padding 45
     top_padding 180
 
-    background "gui/overlay/game_menu.png"
+    background "images/guioverlay/game_menu.png"
 
 style game_menu_navigation_frame:
     xsize 420
@@ -849,7 +849,7 @@ style radio_vbox:
 
 style radio_button:
     properties gui.button_properties("radio_button")
-    foreground "gui/button/radio_[prefix_]foreground.png"
+    foreground "images/guibutton/radio_[prefix_]foreground.png"
 
 style radio_button_text:
     properties gui.text_properties("radio_button")
@@ -859,7 +859,7 @@ style check_vbox:
 
 style check_button:
     properties gui.button_properties("check_button")
-    foreground "gui/button/check_[prefix_]foreground.png"
+    foreground "images/guibutton/check_[prefix_]foreground.png"
 
 style check_button_text:
     properties gui.text_properties("check_button")
@@ -1152,7 +1152,7 @@ screen confirm(message, yes_action, no_action):
 
     style_prefix "confirm"
 
-    add "gui/overlay/confirm.png"
+    add "images/guioverlay/confirm.png"
 
     frame:
 
@@ -1183,7 +1183,7 @@ style confirm_button is gui_medium_button
 style confirm_button_text is gui_medium_button_text
 
 style confirm_frame:
-    background Frame([ "gui/confirm_frame.png", "gui/frame.png"], gui.confirm_frame_borders, tile=gui.frame_tile)
+    background Frame([ "images/guiconfirm_frame.png", "images/guiframe.png"], gui.confirm_frame_borders, tile=gui.frame_tile)
     padding gui.confirm_frame_borders.padding
     xalign .5
     yalign .5
@@ -1243,7 +1243,7 @@ style skip_triangle is skip_text
 
 style skip_frame:
     ypos gui.skip_ypos
-    background Frame("gui/skip.png", gui.skip_frame_borders, tile=gui.frame_tile)
+    background Frame("images/guiskip.png", gui.skip_frame_borders, tile=gui.frame_tile)
     padding gui.skip_frame_borders.padding
 
 style skip_text:
@@ -1287,7 +1287,7 @@ style notify_text is gui_text
 style notify_frame:
     ypos gui.notify_ypos
 
-    background Frame("gui/notify.png", gui.notify_frame_borders, tile=gui.frame_tile)
+    background Frame("images/guinotify.png", gui.notify_frame_borders, tile=gui.frame_tile)
     padding gui.notify_frame_borders.padding
 
 style notify_text:
@@ -1369,7 +1369,7 @@ style nvl_window:
     xfill True
     yfill True
 
-    background "gui/nvl.png"
+    background "images/guinvl.png"
     padding gui.nvl_borders.padding
 
 style nvl_entry:
@@ -1463,8 +1463,8 @@ style bubble_what:
     layout "subtitle"
     color "#000"
 
-define bubble.frame = Frame("gui/bubble.png", 55, 55, 55, 95)
-define bubble.thoughtframe = Frame("gui/thoughtbubble.png", 55, 55, 55, 55)
+define bubble.frame = Frame("images/guibubble.png", 55, 55, 55, 95)
+define bubble.thoughtframe = Frame("images/guithoughtbubble.png", 55, 55, 55, 55)
 
 define bubble.properties = {
     "bottom_left" : {
@@ -1533,27 +1533,27 @@ screen quick_menu():
 
 style window:
     variant "small"
-    background "gui/phone/textbox.png"
+    background "images/guiphone/textbox.png"
 
 style radio_button:
     variant "small"
-    foreground "gui/phone/button/radio_[prefix_]foreground.png"
+    foreground "images/guiphone/button/radio_[prefix_]foreground.png"
 
 style check_button:
     variant "small"
-    foreground "gui/phone/button/check_[prefix_]foreground.png"
+    foreground "images/guiphone/button/check_[prefix_]foreground.png"
 
 style nvl_window:
     variant "small"
-    background "gui/phone/nvl.png"
+    background "images/guiphone/nvl.png"
 
 style main_menu_frame:
     variant "small"
-    background "gui/phone/overlay/main_menu.png"
+    background "images/guiphone/overlay/main_menu.png"
 
 style game_menu_outer_frame:
     variant "small"
-    background "gui/phone/overlay/game_menu.png"
+    background "images/guiphone/overlay/game_menu.png"
 
 style game_menu_navigation_frame:
     variant "small"
@@ -1570,38 +1570,38 @@ style pref_vbox:
 style bar:
     variant "small"
     ysize gui.bar_size
-    left_bar Frame("gui/phone/bar/left.png", gui.bar_borders, tile=gui.bar_tile)
-    right_bar Frame("gui/phone/bar/right.png", gui.bar_borders, tile=gui.bar_tile)
+    left_bar Frame("images/guiphone/bar/left.png", gui.bar_borders, tile=gui.bar_tile)
+    right_bar Frame("images/guiphone/bar/right.png", gui.bar_borders, tile=gui.bar_tile)
 
 style vbar:
     variant "small"
     xsize gui.bar_size
-    top_bar Frame("gui/phone/bar/top.png", gui.vbar_borders, tile=gui.bar_tile)
-    bottom_bar Frame("gui/phone/bar/bottom.png", gui.vbar_borders, tile=gui.bar_tile)
+    top_bar Frame("images/guiphone/bar/top.png", gui.vbar_borders, tile=gui.bar_tile)
+    bottom_bar Frame("images/guiphone/bar/bottom.png", gui.vbar_borders, tile=gui.bar_tile)
 
 style scrollbar:
     variant "small"
     ysize gui.scrollbar_size
-    base_bar Frame("gui/phone/scrollbar/horizontal_[prefix_]bar.png", gui.scrollbar_borders, tile=gui.scrollbar_tile)
-    thumb Frame("gui/phone/scrollbar/horizontal_[prefix_]thumb.png", gui.scrollbar_borders, tile=gui.scrollbar_tile)
+    base_bar Frame("images/guiphone/scrollbar/horizontal_[prefix_]bar.png", gui.scrollbar_borders, tile=gui.scrollbar_tile)
+    thumb Frame("images/guiphone/scrollbar/horizontal_[prefix_]thumb.png", gui.scrollbar_borders, tile=gui.scrollbar_tile)
 
 style vscrollbar:
     variant "small"
     xsize gui.scrollbar_size
-    base_bar Frame("gui/phone/scrollbar/vertical_[prefix_]bar.png", gui.vscrollbar_borders, tile=gui.scrollbar_tile)
-    thumb Frame("gui/phone/scrollbar/vertical_[prefix_]thumb.png", gui.vscrollbar_borders, tile=gui.scrollbar_tile)
+    base_bar Frame("images/guiphone/scrollbar/vertical_[prefix_]bar.png", gui.vscrollbar_borders, tile=gui.scrollbar_tile)
+    thumb Frame("images/guiphone/scrollbar/vertical_[prefix_]thumb.png", gui.vscrollbar_borders, tile=gui.scrollbar_tile)
 
 style slider:
     variant "small"
     ysize gui.slider_size
-    base_bar Frame("gui/phone/slider/horizontal_[prefix_]bar.png", gui.slider_borders, tile=gui.slider_tile)
-    thumb "gui/phone/slider/horizontal_[prefix_]thumb.png"
+    base_bar Frame("images/guiphone/slider/horizontal_[prefix_]bar.png", gui.slider_borders, tile=gui.slider_tile)
+    thumb "images/guiphone/slider/horizontal_[prefix_]thumb.png"
 
 style vslider:
     variant "small"
     xsize gui.slider_size
-    base_bar Frame("gui/phone/slider/vertical_[prefix_]bar.png", gui.vslider_borders, tile=gui.slider_tile)
-    thumb "gui/phone/slider/vertical_[prefix_]thumb.png"
+    base_bar Frame("images/guiphone/slider/vertical_[prefix_]bar.png", gui.vslider_borders, tile=gui.slider_tile)
+    thumb "images/guiphone/slider/vertical_[prefix_]thumb.png"
 
 style slider_vbox:
     variant "small"
