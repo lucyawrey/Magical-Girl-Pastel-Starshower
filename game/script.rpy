@@ -35,7 +35,7 @@ label start:
 
     scene black
 
-    "In three more seconds she slams into the ground with a heavy crunch, having landing in a slight crouch completely unharmed. Her dress disappears into tiny motes of light that mix with the dust kicked up by her landing."
+    "In three more seconds she slams into the ground with a heavy crunch, having landed in a slight crouch completely unharmed. Her dress disappears into tiny motes of light that mix with the dust kicked up by her landing."
 
     scene bg street
 
