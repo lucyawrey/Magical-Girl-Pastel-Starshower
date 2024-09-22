@@ -29,10 +29,21 @@ label day1:
 
     scene bg street
 
+    show screen calendar
+
     play music "power-of-the-wind.mp3"
 
     show miku
 
     stella "Nothing like a good fifty-story fall to wake me up in the morning!"
 
+    $ calendar.next_day()
+
+    "A day passes..."
+
+    $ calendar.next_day()
+
+    "And another..."
+
     jump end
+    
