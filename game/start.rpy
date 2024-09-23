@@ -3,7 +3,7 @@
 # The game starts here.
 label start:
     python:
-        calendar = Calendar(start_time_block=1, start_day = 8, start_month=9, start_year=2194)
+        calendar = Calendar(start_day = 8, start_month=9, start_year=2194)
 
     jump day1
 
