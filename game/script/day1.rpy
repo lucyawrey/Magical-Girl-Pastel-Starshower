@@ -37,21 +37,29 @@ label day1:
 
     stella "Nothing like a good fifty-story fall to wake me up in the morning!"
 
-    $ calendar.advance()
-
-    "A few hours pass..."
-
-    $ calendar.advance(6)
-
-    "A day and change..."
-
     $ calendar.next_day()
 
-    "A day..."
+    "A day passes..."
 
-    $ calendar.next_day(10)
+    $ calendar.next_day(7)
 
-    "Ten..."
+    "A week passes..."
+
+    $ calendar.next_day(7)
+
+    "Another week passes ..."
+
+    $ calendar.next_day(7)
+
+    "Another week passes ..."
+
+    $ calendar.next_day(1)
+
+    "A day passes ..."
+
+    $ calendar.set_day(1)
+
+    "Restart!"
 
     jump end
     

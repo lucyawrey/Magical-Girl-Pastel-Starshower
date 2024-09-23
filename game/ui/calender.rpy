@@ -3,10 +3,13 @@ screen calendar():
 
 init python:
     class Calendar(object):
-        def __init__(self, initial_time_block: int = 0, start_day: int = 1, start_month: int = 1, start_year: int = 2000):
+        def __init__(self, start_time: int = 1, start_day: int = 1, start_month: int = 1, start_year: int = 2000):
             self.game_day = 1
+            self.time_block = start_time
 
-            self.time_block = initial_time_block
+            self.start_day = start_day
+            self.start_month = start_month
+            self.start_year = start_year
 
             self.day = start_day
             self.month = start_month
@@ -17,12 +20,19 @@ init python:
             self.day_names = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
             self.month_names = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
             self.month_day_counts = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-            
-        def next_day(self, days: int = 1, start_time: int = 0):
+
+        def set_day(self, game_day: int = 1, start_time: int = 1):
+            self.game_day = game_day
+            self.day = self.start_day
+            self.month = self.start_month
+            self.year = self.start_year
+            self.next_day(days=game_day - 1, start_time=start_time)
+
+        def next_day(self, days: int = 1, start_time: int = 1):
             self.time_block = start_time
             self.game_day += days
             self.day += days
-            day_count = self.month_day_counts[self.month]
+            day_count = self.month_day_counts[self.month - 1]
             if self.day > day_count:
                 self.month += self.day // day_count
                 if self.month > 12:
@@ -38,10 +48,10 @@ init python:
                 self.next_day(days=days, start_time=remainder)
 
         def get_time(self):
-            return self.time_block_names[self.time_block]
+            return self.time_block_names[self.time_block - 1]
 
         def get_weekday(self, max_characters: int):
-            day_list_index = self.day % 7
+            day_list_index = self.game_day % 7
             day_name = self.day_names[day_list_index]
             if max_characters is not None:
                 day_name = day_name[:max_characters]
