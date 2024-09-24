@@ -29,37 +29,13 @@ label day1:
 
     scene bg street
 
-    show screen calendar
+    show screen calendar_overlay
 
     play music "power-of-the-wind.mp3"
 
     show miku
 
     stella "Nothing like a good fifty-story fall to wake me up in the morning!"
-
-    $ calendar.next_day()
-
-    "A day passes..."
-
-    $ calendar.next_day(7)
-
-    "A week passes..."
-
-    $ calendar.next_day(7)
-
-    "Another week passes ..."
-
-    $ calendar.next_day(7)
-
-    "Another week passes ..."
-
-    $ calendar.next_day(1)
-
-    "A day passes ..."
-
-    $ calendar.set_day(1)
-
-    "Restart!"
 
     jump end
     

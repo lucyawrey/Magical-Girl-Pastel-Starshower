@@ -23,7 +23,7 @@ label end:
 
         "No":
 
-            jump end    
+            jump end
 
 label quit:
 
