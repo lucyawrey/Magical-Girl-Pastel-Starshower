@@ -1,8 +1,13 @@
 screen calendar_overlay():
+    tag calendar
     text calendar.date.strftime(f"%B {calendar.get_ordinal()} | %a\n{calendar.get_time()}")
 
 screen day_change():
-    text calendar.date.strftime(f"Day {calendar.day}\nA, %B {calendar.get_ordinal()} 2XX4")
+    tag calendar
+    text "Day [calendar.day]" at transform:
+        align (0.5, 0.38)
+    text calendar.date.strftime(f"%A, %B {calendar.get_ordinal()}, 2XX{calendar.date.year % 10}") at transform:
+        align (0.5, 0.45)
 
 init python:
     import datetime

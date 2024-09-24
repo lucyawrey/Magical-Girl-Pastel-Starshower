@@ -1,4 +1,4 @@
-label day1:
+label day_1:
 
     play music "morning.mp3"
 
@@ -29,7 +29,7 @@ label day1:
 
     scene bg street
 
-    show screen calendar_overlay
+
 
     play music "power-of-the-wind.mp3"
 
@@ -37,5 +37,6 @@ label day1:
 
     stella "Nothing like a good fifty-story fall to wake me up in the morning!"
 
-    jump end
-    
+    "End of day!"
+
+    jump next_day
