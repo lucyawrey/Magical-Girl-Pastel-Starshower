@@ -24,10 +24,7 @@ label day_4:
     play music "morning.mp3"
     scene bg bedroom
 
-    "Restart."
+    stella "Maybe it's time for a change."
 
-    $ calendar.set_day(1)
-    scene black
-    stop music fadeout 1.0
-    jump first_day
+    jump next_day
     

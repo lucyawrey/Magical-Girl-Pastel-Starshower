@@ -15,6 +15,7 @@ label start:
     jump first_day
 
 label next_day:
+    hide screen calendar_overlay
     scene black
     stop music fadeout 1.0
     $ calendar.next_day()
@@ -26,8 +27,17 @@ label first_day:
         day_label = f"day_{calendar.day}"
         if renpy.has_label(day_label):
             renpy.jump(f"day_{calendar.day}")
+    jump end
+
+label world_map:
+    hide screen calendar_overlay
+    scene bg world map
+    play music "morning.mp3"
+    $ renpy.choice_for_skipping()
+    pause
+    return
 
 label end:
     "—"
+    $ renpy.choice_for_skipping()
     "That's all for now! More coming soon."
-    pause

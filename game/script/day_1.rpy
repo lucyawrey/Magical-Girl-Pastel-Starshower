@@ -34,8 +34,6 @@ label day_1:
 
     stella "Where to now?"
 
-    scene bg world map
-
-    pause
+    call world_map
 
     jump next_day
