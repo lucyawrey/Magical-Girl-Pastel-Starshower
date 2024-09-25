@@ -14,7 +14,9 @@ init python:
 
     class Calendar(object):
         def __init__(self, start_year: int = 2000, start_month: int = 1, start_day: int = 1, start_time: int = 1, day_skips_dict: dict = None):
+            # In-game days elapsed since start of game
             self.day = 1
+            # Current time, must be between 1-4
             self.time_block = start_time
 
             self.day_skips_dict = day_skips_dict
