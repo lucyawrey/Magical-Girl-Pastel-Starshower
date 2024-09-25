@@ -32,9 +32,11 @@ label first_day:
 label world_map:
     hide screen calendar_overlay
     scene bg world map
+    show screen world_map
     play music "morning.mp3"
     $ renpy.choice_for_skipping()
     pause
+    hide screen world_map
     return
 
 label end:
