@@ -32,6 +32,10 @@ label day_1:
 
     stella "Nothing like a good fifty-story fall to wake me up in the morning!"
 
-    "End of day!"
+    stella "Where to now?"
+
+    scene bg world map
+
+    pause
 
     jump next_day

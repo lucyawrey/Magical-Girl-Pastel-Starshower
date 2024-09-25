@@ -30,9 +30,4 @@ label first_day:
 label end:
     "—"
     "That's all for now! More coming soon."
-    menu:
-        "Quit?"
-        "Yes":
-            return
-        "No":
-            jump end
+    pause
