@@ -32,6 +32,9 @@ define config.version = "0.1"
 define gui.about = _p("""
 """)
 
+## Gameplay
+define config.rollback_enabled = False
+
 
 ## A short name for the game used for executables and directories in the built
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
@@ -48,7 +51,7 @@ define build.name = "MagicalGirlPastelStarshower"
 
 define config.has_sound = True
 define config.has_music = True
-define config.has_voice = True
+define config.has_voice = False
 
 
 ## To allow the user to play a test sound on the sound or voice channel,
