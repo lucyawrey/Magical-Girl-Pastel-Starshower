@@ -13,7 +13,6 @@ label day_1:
     "Once she is confident she's done the best she can without resorting to magic, she brushes her teeth, walks to her bedroom, changes into an outfit looted from the floor, slips through the sliding door across from her bed, and jumps off the balcony."
 
     scene bg fall
-
     play music "woosh.mp3"
 
     "She smiles as she feels the near weightlessness of freefall and the wind rushing towards and past her, ruining any progress she'd made on her hair in the process."
@@ -22,17 +21,13 @@ label day_1:
 
     stop music fadeout 1.0
     play sound "sfx-land.mp3"
-
     scene black
 
     "In three more seconds she slams into the ground with a heavy crunch, having landed in a slight crouch completely unharmed. Her dress disappears into tiny motes of light that mix with the dust kicked up by her landing."
 
     scene bg street
-
-
-
+    show screen calendar_overlay
     play music "power-of-the-wind.mp3"
-
     show miku
 
     stella "Nothing like a good fifty-story fall to wake me up in the morning!"

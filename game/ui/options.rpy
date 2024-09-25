@@ -145,6 +145,8 @@ default preferences.afm_time = 15
 
 define config.save_directory = "MagicalGirlPastelStarshower-1726631425"
 
+## Debugging log file location (relative to project root)
+define config.log = _("debug_log.txt")
 
 ## Icon ########################################################################
 ##
