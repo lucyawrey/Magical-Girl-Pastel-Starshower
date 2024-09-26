@@ -11,6 +11,7 @@ label start:
         # Creates the global calender object for a given start date.
         # Changing the day number will always be relative to this start date.
         calendar = Calendar(start_day = 8, start_month=9, start_year=2194, day_skips_dict=day_skips)
+        start = Time.MORNING
 
     jump first_day
 
@@ -18,7 +19,8 @@ label next_day:
     hide screen calendar_overlay
     scene black
     stop music fadeout 1.0
-    $ calendar.next_day()
+    $ calendar.next_day(start_time=start)
+    $ start = Time.MORNING
 label first_day:
     show screen day_change
     ""
