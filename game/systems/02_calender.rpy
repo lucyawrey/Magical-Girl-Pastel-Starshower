@@ -10,29 +10,7 @@ screen day_change():
         align (0.5, 0.45)
 
 init python:
-    from enum import Enum
     import datetime
-
-    class Time(int, Enum):
-        MORNING = 1, "Morning"
-        AFTERNOON = 2, "Afternoon"
-        EVENING = 3, "Evening"
-        NIGHT = 4, "Late Night"
-
-        def __new__(cls, value, label):
-            obj = int.__new__(cls, value)
-            obj._value_ = value
-            obj.label = label
-            return obj
-
-        @classmethod
-        def from_str(cls, input_str):
-            for finger in cls:
-                if finger.label == input_str:
-                    return finger
-            raise ValueError(f"{cls.__name__} has no value matching {input_str}")
-
-    time_blocks = len(Time)
 
     class Calendar(object):
         def __init__(self, start_year: int = 2000, start_month: int = 1, start_day: int = 1, start_time: Time = Time.MORNING, day_skips_dict: dict = None):
@@ -51,7 +29,6 @@ init python:
             if day > 1:
                 self.next_day(day - 1, start_time)
 
-
         def next_day(self, days: int = 1, start_time: Time = Time.MORNING) -> None:
             skip_sum = 0
             if self.day_skips_dict is not None:
@@ -64,9 +41,9 @@ init python:
 
         def advance(self, blocks: Time = Time.MORNING) -> None:
             self.time = Time(self.time + blocks)
-            if self.time > time_blocks:
-                days = self.time // time_blocks
-                remaining_time = Time(self.time % time_blocks)
+            if self.time > TIME_BLOCKS:
+                days = self.time // TIME_BLOCKS
+                remaining_time = Time(self.time % TIME_BLOCKS)
                 self.next_day(days=days, start_time=remaining_time)
 
         def get_time(self) -> str:

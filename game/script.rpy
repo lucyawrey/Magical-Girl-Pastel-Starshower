@@ -12,6 +12,7 @@ label start:
         # Changing the day number will always be relative to this start date.
         calendar = Calendar(start_day = 8, start_month=9, start_year=2194, day_skips_dict=day_skips)
         start = Time.MORNING
+        world_map = WorldMap(Location.HOME)
 
     jump first_day
 
