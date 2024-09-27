@@ -28,10 +28,9 @@ label day_1:
     scene bg street
     show screen calendar_overlay
     play music "power-of-the-wind.mp3"
-    show miku
+    show stella joy at head
 
     stella "Nothing like a good fifty-story fall to wake me up in the morning!"
-
     stella "Where to now?"
 
     call world_map

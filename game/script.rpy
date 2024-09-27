@@ -1,4 +1,6 @@
 ﻿define _scene_show_hide_transition = Dissolve(0.25)
+transform head:
+    align (0.5, 0.45)
 
 # The game starts here.
 label start:
