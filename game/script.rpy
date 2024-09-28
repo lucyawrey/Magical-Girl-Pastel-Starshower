@@ -35,7 +35,6 @@ label first_day:
     jump end
 
 label world_map:
-    hide screen calendar_overlay
     scene bg world map
     show screen world_map
     play music "morning.mp3"

@@ -17,9 +17,9 @@ init python:
 
     LOCATION_DATA = {
         Location.OTHER: LocationData(name=Location.OTHER.value),
-        Location.HOME: LocationData(name=Location.OTHER.value, on_map=True),
-        Location.STREET: LocationData(name=Location.OTHER.value),
-        Location.PARK: LocationData(name=Location.OTHER.value),
-        Location.CAFE: LocationData(name=Location.OTHER.value),
-        Location.THERAPY: LocationData(name=Location.OTHER.value)
+        Location.HOME: LocationData(name=Location.HOME.value, on_map=True, position=(0.5, 0.51)),
+        Location.STREET: LocationData(name=Location.STREET.value, on_map=True, position=(0.5, 0.52)),
+        Location.PARK: LocationData(name=Location.PARK.value, on_map=True, position=(0.5, 0.53)),
+        Location.CAFE: LocationData(name=Location.CAFE.value, on_map=True, position=(0.5, 0.54)),
+        Location.THERAPY: LocationData(name=Location.THERAPY.value, on_map=True, position=(0.5, 0.55))
     }
