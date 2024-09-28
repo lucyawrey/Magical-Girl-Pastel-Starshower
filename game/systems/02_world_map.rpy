@@ -4,7 +4,7 @@ screen world_map():
     tag map
     for i, location in enumerate(world_map.get_all_location_data()):
         add "selector" at transform:
-            align (0.5, 0.5)
+            align location.position
         text location.name at transform:
             align (0.018, 0.97 - (0.04 * i))
 
