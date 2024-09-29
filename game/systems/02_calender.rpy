@@ -1,9 +1,14 @@
 screen calendar_overlay():
     tag calendar
-    text calendar.date.strftime(f"%B {calendar.get_ordinal()} | %a") at transform:
-        align (0.99, 0.01)
-    text calendar.get_time() at transform:
-        align (0.99, 0.05)
+    style_prefix "calendar_overlay"
+    frame:
+        background "#00000090"
+        align (.995, 0.01)
+        padding (14, 12)
+        has vbox
+        text calendar.date.strftime(f"%B {calendar.get_ordinal()} | %a")
+        text calendar.get_time() at transform:
+            xalign 1.0
 
 
 screen day_change():

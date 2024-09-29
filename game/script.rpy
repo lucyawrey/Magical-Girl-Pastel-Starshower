@@ -14,7 +14,10 @@ label start:
         # Changing the day number will always be relative to this start date.
         calendar = Calendar(start_day = 8, start_month=9, start_year=2194, day_skips_dict=day_skips)
         start = Time.MORNING
+
         world_map = WorldMap(Location.HOME)
+        location_list = world_map.get_location_list()
+        hovered_location = ""
 
     jump first_day
 
@@ -39,11 +42,18 @@ label world_map:
     show screen world_map
     play music "morning.mp3"
     $ renpy.choice_for_skipping()
-    pause
+    # Need to figure out how to stop skipping past this point.
+    $ renpy.pause(hard=True)
+
+label go:
     hide screen world_map
+    hide screen calendar_overlay
+    scene black
+    "Arrived at: [world_map.data.name]."
     return
 
 label end:
     "—"
     $ renpy.choice_for_skipping()
     "That's all for now! More coming soon."
+    return
