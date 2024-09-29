@@ -1,6 +1,7 @@
 screen calendar_overlay():
     tag calendar
     style_prefix "calendar_overlay"
+    zorder 2
     frame:
         background "#00000090"
         align (.995, 0.01)

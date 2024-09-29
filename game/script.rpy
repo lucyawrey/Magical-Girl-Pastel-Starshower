@@ -34,11 +34,11 @@ label first_day:
     python:
         day_label = f"day_{calendar.day}"
         if renpy.has_label(day_label):
-            renpy.jump(f"day_{calendar.day}")
+            renpy.jump(day_label)
+    "No label for day with ID [day_label]."
     jump end
 
 label world_map:
-    scene bg world map
     show screen world_map
     play music "morning.mp3"
     $ renpy.choice_for_skipping()
@@ -47,9 +47,11 @@ label world_map:
 
 label go:
     hide screen world_map
-    hide screen calendar_overlay
-    scene black
-    "Arrived at: [world_map.data.name]."
+    python:
+        loc_label = world_map.data.id
+        if renpy.has_label(loc_label):
+            renpy.jump(loc_label)
+    "No label for location with ID [world_map.data.id]."
     return
 
 label end:

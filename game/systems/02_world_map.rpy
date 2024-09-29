@@ -4,6 +4,8 @@ image selector_hover = Transform("images/selector light.svg", size=(60, 60))
 screen world_map():
     tag map
     style_prefix "world_map"
+    zorder 1
+    add "bg world map"
     for i, location in enumerate(location_list):
         add ("selector" if hovered_location != location.name else "selector_hover") at transform:
             align location.position

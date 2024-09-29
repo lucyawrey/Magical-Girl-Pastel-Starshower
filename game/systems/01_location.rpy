@@ -13,6 +13,7 @@ init python:
     class LocationData():
         def __init__(self, enum: Location, on_map = False, position: (float, float) = (0, 0)):
             self.enum = enum
+            self.id = str(enum).replace("Location.", "").lower()
             self.name = enum.value
             self.on_map = on_map
             self.position = position
