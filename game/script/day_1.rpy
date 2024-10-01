@@ -30,8 +30,12 @@ label day_1:
     play music "power-of-the-wind.mp3"
     show stella joy at head
 
-    stella "Nothing like a good fifty-story fall to wake me up in the morning!"
-    stella "Where to now?"
+    stella "A good fifty-story fall always wakes me up in the morning."
+    stella "I really should head to the cafe, don't want to be any later than I already am. Again."
+
+    "Select a destination from the city map."
+
+    show stella at head
 
     call world_map
 

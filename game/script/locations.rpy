@@ -1,13 +1,22 @@
 label home:
-    stella "On second thought, I'll just stay home."
+    menu:
+        stella "Should I really just go back home and sleep instead?"
+        "Yes":
+            jump stay_home
+        "No":
+            call world_map
+    return
 
-    scene black
+    label stay_home:
+        stella "Yeah, the fall was nice, but I don't actually feel like going anywhere. I'll call off."
 
-    "Stella enters her apartment building and takes the elevator back to her apartment."
+        scene black
 
-    scene bg bedroom
+        "Stella reenters her apartment building from the main entrance and takes an elevator back to the 50th floor."
 
-    stella "Goodnight, me."
+        scene bg bedroom
+
+        stella "Goodnight, me."
 
     return
 
@@ -39,8 +48,6 @@ label park:
     return
 
 label cafe:
-    stella "I should actually go to work."
-
     scene black
 
     "Stella heads to work for the day..."

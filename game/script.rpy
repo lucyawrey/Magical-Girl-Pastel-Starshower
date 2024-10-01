@@ -1,4 +1,4 @@
-﻿define _scene_show_hide_transition = Dissolve(0.25)
+﻿define _scene_show_hide_transition = Dissolve(0.20)
 transform head:
     align (0.5, 0.45)
 
