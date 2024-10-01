@@ -30,12 +30,9 @@ label riverwalk:
     return
 
 label street:
-    stella "I think I'll just head downtown."
+    stella "I would feel bad skipping work only hang out on the street on right next to the café. I don't think anyone would really care, but still. Like, what if someone saw me? No way."
 
-    scene black
-
-    "Stella spends the day downtown enjoying the food and atmosphere."
-
+    call world_map
     return
 
 label park:
@@ -57,6 +54,5 @@ label cafe:
 label therapy:
     stella "I don't have therapy today."
 
-    call world_map    
-
+    call world_map
     return

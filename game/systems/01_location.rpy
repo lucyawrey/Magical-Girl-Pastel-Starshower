@@ -4,10 +4,10 @@ init python:
     class Location(str, Enum):
         HOME = "Home"
         RIVERWALK = "Riverwalk"
-        STREET = "Downtown Streets"
+        STREET = "Main Street"
         PARK = "Park"
-        CAFE = "Cafe"
-        THERAPY = "Therapy Office"
+        CAFE = "Café"
+        THERAPY = "Therapy"
         OTHER = "Other"
 
     class LocationData():
