@@ -16,7 +16,7 @@ label start:
         start = Time.MORNING
 
         world_map = WorldMap(Location.HOME)
-        location_list = world_map.get_location_list()
+        location_list = get_location_list()
         hovered_location = ""
 
     jump first_day

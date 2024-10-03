@@ -27,3 +27,6 @@ init python:
         Location.THERAPY: LocationData(enum=Location.THERAPY, on_map=True, position=(0.5, 0.645)),
         Location.OTHER: LocationData(enum=Location.OTHER),
     }
+
+    def get_location_list():
+        return [value for key, value in LOCATION_DATA.items() if value.on_map == True]

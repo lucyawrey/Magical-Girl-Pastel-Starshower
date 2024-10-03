@@ -43,6 +43,3 @@ init python:
         def set_location(self, new_location: Location):
             self.location = new_location
             self.data = LOCATION_DATA[new_location]
-
-        def get_location_list(self):
-            return [v for k, v in LOCATION_DATA.items() if v.on_map == True]
