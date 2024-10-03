@@ -1,6 +1,6 @@
 label home:
     menu:
-        stella "Should I really just go back home and sleep instead?"
+        stellan "Should I really just go back home and sleep instead?"
         "Yes":
             jump stay_home
         "No":
@@ -8,7 +8,7 @@ label home:
     return
 
     label stay_home:
-        stella "Yeah, the fall was nice, but I don't actually feel like going anywhere. I'll call off."
+        stellan "Yeah, the fall was nice, but I don't actually feel like going anywhere. I'll call off."
 
         scene black
 
@@ -16,12 +16,12 @@ label home:
 
         scene bg bedroom
 
-        stella "Goodnight, me."
+        stellan "Goodnight, me."
 
     return
 
 label riverwalk:
-    stella "Fishing at the riverwalk sounds like fun."
+    stellan "Fishing at the riverwalk sounds like fun."
 
     scene black
 
@@ -30,13 +30,13 @@ label riverwalk:
     return
 
 label street:
-    stella "I would feel bad skipping work only hang out on the street on right next to the café. I don't think anyone would really care, but still. Like, what if someone saw me? No way."
+    stellan "I would feel bad skipping work only hang out on the street on right next to the café where someone could see me. I don't think anyone would really care, but still. No way."
 
     call world_map
     return
 
 label park:
-    stella "Maybe I should go for a walk."
+    stellan "Maybe I should go for a walk."
 
     scene black
 
@@ -52,7 +52,7 @@ label cafe:
     return
 
 label therapy:
-    stella "I don't have therapy today."
+    stellan "I don't have therapy today."
 
     call world_map
     return

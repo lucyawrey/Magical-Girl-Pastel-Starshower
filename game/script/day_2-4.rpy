@@ -9,14 +9,14 @@ label day_2:
     scene bg bedroom
     show stella at head
 
-    stella "A new day already, huh. I don't really feel like going anywhere..."
+    stellan "A new day already, huh. I don't really feel like going anywhere..."
     
     $ calendar.advance(2)
     scene bg bedroom dark
     show stella at head
 
-    stella "Oh, it's already night..."
-    stella "I guess I'll just go back to sleep."
+    stellan "Oh, it's already night..."
+    stellan "I guess I'll just go back to sleep."
     
     jump next_day
     
@@ -27,7 +27,7 @@ label day_3:
     scene bg bedroom
     show stella at head
 
-    stella "..."
+    stellan "..."
 
     jump next_day
 
@@ -38,7 +38,7 @@ label day_4:
     scene bg bedroom
     show stella surprise at head
 
-    stella "Maybe it's time for a change."
+    stellan "Maybe it's time for a change."
 
     jump next_day
     
