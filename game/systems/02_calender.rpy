@@ -3,13 +3,15 @@ screen calendar_overlay():
     style_prefix "calendar_overlay"
     zorder 2
     frame:
-        background "#00000090"
-        align (.995, 0.01)
-        padding (14, 12)
         has vbox
         text calendar.date.strftime(f"%B {calendar.get_ordinal()} | %a")
         text calendar.get_time() at transform:
             xalign 1.0
+
+style calendar_overlay_frame:
+    background "#00000090"
+    align (0.995, 0.008)
+    padding (14, 12)
 
 
 screen day_change():
@@ -49,7 +51,7 @@ init python:
             self.day += days
             self.time = start_time
 
-        def advance(self, blocks: Time = Time.MORNING) -> None:
+        def pass_time(self, blocks: Time = Time.MORNING) -> None:
             self.time = Time(self.time + blocks)
             if self.time > TIME_BLOCKS:
                 days = self.time // TIME_BLOCKS

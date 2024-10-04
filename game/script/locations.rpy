@@ -1,6 +1,6 @@
 label home:
     menu:
-        stellan "Should I really just go back home and sleep instead?"
+        stellan "Should I really just go back home and sleep?"
         "Yes":
             jump stay_home
         "No":
@@ -16,7 +16,7 @@ label home:
 
         scene bg bedroom
 
-        stellan "Goodnight, me."
+        stella "Goodnight, me."
 
     return
 

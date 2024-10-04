@@ -1,15 +1,16 @@
+define stellam = Character("Mysterious Voice", color="#fff704")
 label ask_player_name:
-    scene black
-    show stella happy at head
-    stella "Before we continue, I just wanted to ask you something. You're [persistent.real_player_name] right?"
+    stellam "Before things begin, I just wanted to ask you something. Your name is [persistent.real_player_name], right?"
     menu:
         "Yes":
-            stella "I thought so."
+            stellam "I thought so. I'll make sure to remember it."
         "No":
-            stella "Oh, my bad. I hope I didn't call you a name that you don't like. "
-            stella "What should I call you instead?"
+            stellam "Oh, my bad. I hope that's not a name that you don't like to hear."
+            stellam "What should I call you instead?"
             python:
-                entered_name = renpy.input("What should Stella call you?", length=32)
+                entered_name = renpy.input("What should they call you?", length=32)
                 persistent.real_player_name = entered_name.strip()
-            stella "[persistent.real_player_name]. I like it, I'll make sure to remember it. Not that I wouldn't still remember it if I like hated the name or something."
+            stellam "[persistent.real_player_name]. I like it, and I'll be sure to remember it. Not that I wouldn't still remember it if I like hated the name or something."
+        
+    stellam "Okay, lets go."
     return

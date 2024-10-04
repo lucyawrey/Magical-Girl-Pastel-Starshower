@@ -246,8 +246,7 @@ screen quick_menu():
         hbox:
             style_prefix "quick"
 
-            xalign 0.5
-            yalign 1.0
+            align (0.005, 0.008)
 
             textbutton _("Auto") action Preference("auto-forward", "toggle")
             textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
@@ -269,6 +268,8 @@ style quick_button_text is button_text
 
 style quick_button:
     properties gui.button_properties("quick_button")
+    background "#00000090"
+    padding (12, 12)
 
 style quick_button_text:
     properties gui.text_properties("quick_button")

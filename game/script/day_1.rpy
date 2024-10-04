@@ -1,7 +1,4 @@
 label day_1:
-
-    play music "morning.mp3"
-
     "It's half past ten in the morning and the most dangerous being on planet Earth is quite late for work."
 
     scene bg bathroom
@@ -30,7 +27,7 @@ label day_1:
     play music "power-of-the-wind.mp3"
     show stella joy at head
 
-    stella "A good fifty-story fall always wakes me up in the morning."
+    stella "A 50-story fall always wakes me up in the morning."
     stellan "I really should head to the café, don't want to be any later than I already am. Again."
 
     "Select a destination from the city map."

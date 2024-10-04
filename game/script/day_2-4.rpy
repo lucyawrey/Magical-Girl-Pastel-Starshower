@@ -3,17 +3,14 @@ image bg bedroom dark:
   matrixcolor BrightnessMatrix(-0.5)
 
 label day_2:
-
     show screen calendar_overlay
-    play music "morning.mp3"
     scene bg bedroom
     show stella at head
 
     stellan "A new day already, huh. I don't really feel like going anywhere..."
     
-    $ calendar.advance(2)
-    scene bg bedroom dark
-    show stella at head
+    show bg bedroom dark
+    call pass_time(2)
 
     stellan "Oh, it's already night..."
     stellan "I guess I'll just go back to sleep."
@@ -23,7 +20,6 @@ label day_2:
 label day_3:
 
     show screen calendar_overlay
-    play music "morning.mp3"
     scene bg bedroom
     show stella at head
 
@@ -34,7 +30,6 @@ label day_3:
 label day_4:
 
     show screen calendar_overlay
-    play music "morning.mp3"
     scene bg bedroom
     show stella surprise at head
 
