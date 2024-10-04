@@ -31,7 +31,7 @@ label day_4:
 
     show screen calendar_overlay
     scene bg bedroom
-    show stella surprise at head
+    show stella surprised at head
 
     stellan "Maybe it's time for a change."
 
