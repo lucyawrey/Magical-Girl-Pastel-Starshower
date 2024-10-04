@@ -16,7 +16,7 @@ label home:
         "Stella reenters her apartment building from the main entrance and takes an elevator back to the 50th floor."
 
         scene bg bedroom
-        show stella
+        show stella at head
 
         stella "Goodnight, me."
     return
@@ -33,9 +33,12 @@ label riverwalk:
     return
 
     label riverwalk_walk:
+        show stella happy
+
         stellan "Ah what the heck, I'll call off."
 
-        scene black
+        scene bg riverwalk
+        show stella at head
 
         "Stella spends the day walking down the Neo Detroit riverwalk. She enjoys the sun, snacks on street food, and gets some fishing in."
         "Before she knows it, it's time to head home for the night."

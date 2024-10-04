@@ -269,7 +269,7 @@ style quick_button_text is button_text
 style quick_button:
     properties gui.button_properties("quick_button")
     background "#00000090"
-    padding (12, 12)
+    padding (10, 10)
 
 style quick_button_text:
     properties gui.text_properties("quick_button")
