@@ -2,6 +2,7 @@ label home:
     menu:
         stellan "Should I really just go back home and sleep?"
         "Yes":
+            $ day_1_stay_home = True
             jump stay_home
         "No":
             call world_map
@@ -15,33 +16,41 @@ label home:
         "Stella reenters her apartment building from the main entrance and takes an elevator back to the 50th floor."
 
         scene bg bedroom
+        show stella
 
         stella "Goodnight, me."
-
     return
 
 label riverwalk:
-    stellan "Fishing at the riverwalk sounds like fun."
+    stellan "I could take a stroll down the riverwalk, maybe even go finishing?"
 
-    scene black
+    menu:
+        stellan "Is that worth skipping work for?"
+        "Yes":
+            jump riverwalk_walk
+        "No":
+            call world_map
+    return
 
-    "Stella spends the day fishing."
+    label riverwalk_walk:
+        stellan "Ah what the heck, I'll call off."
 
+        scene black
+
+        "Stella spends the day walking down the Neo Detroit riverwalk. She enjoys the sun, snacks on street food, and gets some fishing in."
+        "Before she knows it, it's time to head home for the night."
     return
 
 label street:
-    stellan "I would feel bad skipping work only hang out on the street on right next to the café where someone could see me. I don't think anyone would really care, but still. No way."
+    stellan "I would feel bad skipping work only hang out on the street right next to the café where someone could see me. I don't think anyone would really care, but still. No way."
 
     call world_map
     return
 
 label park:
-    stellan "Maybe I should go for a walk."
+    stellan "I don't really feel like hanging out at the park today. Plus, I really should just go to work."
 
-    scene black
-
-    "Stella spends the day walking, napping, and training in the park."
-
+    call world_map
     return
 
 label cafe:

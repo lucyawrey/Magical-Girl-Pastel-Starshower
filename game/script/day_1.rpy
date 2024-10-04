@@ -28,11 +28,12 @@ label day_1:
     show stella joy at head
 
     stella "A 50-story fall always wakes me up in the morning."
+
+    show stella at head
+
     stellan "I really should head to the café, don't want to be any later than I already am. Again."
 
     "Select a destination from the city map."
-
-    show stella at head
 
     call world_map
 

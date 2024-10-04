@@ -14,3 +14,6 @@ label ask_player_name:
         
     stellam "Okay, lets go."
     return
+
+label call_off:
+    return
