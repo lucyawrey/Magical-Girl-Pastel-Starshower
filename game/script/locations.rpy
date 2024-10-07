@@ -26,6 +26,7 @@ label riverwalk:
 
     menu:
         stellan "Is that worth skipping work for?"
+
         "Yes":
             jump riverwalk_walk
         "No":
@@ -40,8 +41,12 @@ label riverwalk:
         scene bg riverwalk
         show stella at head
 
-        "Stella spends the day walking down the Neo Detroit riverwalk. She enjoys the sun, snacks on street food, and gets some fishing in."
-        "Before she knows it, it's time to head home for the night."
+        "Stella begins her walk down the Neo Detroit riverwalk, enjoying the early autumn sun and the gentle breeze."
+        
+        stellan "It really is a nice day out, especially when no one is trying to talk to me."
+
+        "Stella continues her walk until reaching her usual pier."    
+    
     return
 
 label street:
@@ -57,7 +62,7 @@ label park:
     return
 
 label cafe:
-    scene black
+    scene bg cafe
 
     "Stella heads to work for the day..."
 

@@ -5,12 +5,12 @@ transform head:
 # The game starts here.
 label start:
     python:
-        # The day skips dictionary allows skipping a number of calender
+        # The day skips dictionary allows skipping a number of calendar
         # days when reaching or passing a given set of in game days.
-        # For example, `dict([(3, 2), (5, 7)])` skips an extra calender
+        # For example, `dict([(3, 2), (5, 7)])` skips an extra calendar
         # day on game day 3 and skips forward an entire week on game day 5.
         day_skips = dict([])
-        # Creates the global calender object for a given start date.
+        # Creates the global calendar object for a given start date.
         # Changing the day number will always be relative to this start date.
         calendar = Calendar(start_day = 8, start_month=9, start_year=2194, day_skips_dict=day_skips)
         start_time = Time.MORNING
@@ -40,10 +40,13 @@ label first_day:
     "No label for day with ID [day_label]."
     jump end
 
-label pass_time(blocks=1):
+label pass_time(blocks=1, time=None):
     python:
-        current_time = calendar.get_time();
-        calendar.pass_time(blocks)
+        current_time = calendar.get_time()
+        if time is not None:
+            calendar.time = time
+        else:
+            calendar.pass_time(blocks)
         next_time = calendar.get_time().lower()
     
     "[current_time] turns to [next_time]."

@@ -36,5 +36,9 @@ label day_1:
     "Select a destination from the city map."
 
     call world_map
+    if calendar.time != Time.NIGHT:
+        call pass_time(time=Time.NIGHT)
 
+    "Before Stella knows it, it's already time to head home."
+    
     jump next_day
