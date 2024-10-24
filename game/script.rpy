@@ -29,9 +29,10 @@ label next_day:
     $ calendar.next_day(start_time=start_time)
     $ start_time = Time.MORNING
 label first_day:
+    scene black
     play music start_music
     show screen day_change
-    ""
+    pause
     hide screen day_change
     python:
         day_label = f"day_{calendar.day}"

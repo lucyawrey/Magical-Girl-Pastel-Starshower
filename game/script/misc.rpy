@@ -1,7 +1,9 @@
 define stellam = Character("Mysterious Voice", color="#fff704")
 label ask_player_name:
-    stellam "Before things begin, I just wanted to ask you something. Your name is [persistent.real_player_name], right?"
+    stellam "Before things begin, I just wanted to ask you something."
     menu:
+        stellam "Your name is [persistent.real_player_name], right?"
+
         "Yes":
             stellam "I thought so. I'll make sure to remember it."
         "No":
