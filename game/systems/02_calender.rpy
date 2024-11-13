@@ -13,13 +13,17 @@ style calendar_overlay_frame:
     align (0.995, 0.008)
     padding (14, 12)
 
-
 screen day_change():
-    tag calendar
+    zorder 101
+    add "black"
     text "Day [calendar.day]" at transform:
         align (0.5, 0.38)
     text calendar.date.strftime(f"%A, %B {calendar.get_ordinal()}, 2XX{calendar.date.year % 10}") at transform:
         align (0.5, 0.45)
+    text calendar.get_time():
+        color calendar.time.color
+        at transform:
+            align (0.5, 0.52)
 
 init python:
     import datetime

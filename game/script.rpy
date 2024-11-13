@@ -1,6 +1,9 @@
-﻿define _scene_show_hide_transition = Dissolve(0.20)
-transform head:
-    align (0.5, 0.45)
+﻿label main_menu:
+    if persistent.first_play:
+        return
+    else:
+        show screen main_menu
+        pause
 
 # The game starts here.
 label start:
@@ -12,33 +15,37 @@ label start:
         day_skips = dict([])
         # Creates the global calendar object for a given start date.
         # Changing the day number will always be relative to this start date.
-        calendar = Calendar(start_day = 8, start_month=9, start_year=2194, day_skips_dict=day_skips)
         start_time = Time.MORNING
+        calendar = Calendar(start_day = 8, start_month=9, start_year=2194, day_skips_dict=day_skips, start_time=start_time)
         start_music = "morning.mp3"
 
         world_map = WorldMap(Location.HOME)
         location_list = get_location_list()
         hovered_location = ""
+        persistent.first_play = False
     
-    call ask_player_name
     jump first_day
 
 label next_day:
     hide screen calendar_overlay
-    scene black
     $ calendar.next_day(start_time=start_time)
     $ start_time = Time.MORNING
 label first_day:
-    scene black
+    python:
+        quick_menu = False
+        dream_label = f"dream_{calendar.day}"
+        if renpy.has_label(dream_label):
+            renpy.call(dream_label)
     play music start_music
     show screen day_change
     pause
     hide screen day_change
     python:
+        quick_menu = True
         day_label = f"day_{calendar.day}"
         if renpy.has_label(day_label):
             renpy.jump(day_label)
-    "No label for day with ID [day_label]."
+    "The [calendar.get_ordinal()] day is not ready yet."
     jump end
 
 label pass_time(blocks=1, time=None):
@@ -70,7 +77,6 @@ label go:
     return
 
 label end:
-    "—"
     $ renpy.choice_for_skipping()
-    "That's all for now! More coming soon."
+    "Thanks for playing this early version of the game!"
     return

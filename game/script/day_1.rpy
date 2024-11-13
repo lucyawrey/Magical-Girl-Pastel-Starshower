@@ -1,3 +1,7 @@
+label dream_1:
+    jump ask_player_name
+    return
+
 label day_1:
     "It's half past ten in the morning and the most dangerous being on planet Earth is quite late for work."
 
