@@ -61,7 +61,7 @@ label pass_time(blocks=1, time=None):
             calendar.pass_time(blocks)
         next_time = calendar.get_time().lower()
     
-    "[current_time] turns to [next_time]."
+    n "[current_time] turns to [next_time]."
     return
 
 label world_map:

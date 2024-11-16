@@ -136,8 +136,6 @@ style window:
     yalign gui.textbox_yalign
     ysize gui.textbox_height
 
-    background Image("images/gui/textbox_name.png", xalign=0.5, yalign=1.0)
-
 style namebox:
     xpos gui.name_xpos
     xanchor gui.name_xalign

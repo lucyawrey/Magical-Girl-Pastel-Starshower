@@ -13,7 +13,7 @@ label home:
 
         scene black
 
-        "Stella reenters her apartment building from the main entrance and takes an elevator back to the 50th floor."
+        n "Stella reenters her apartment building from the main entrance and takes an elevator back to the 50th floor."
 
         scene bg bedroom
         show stella at head
@@ -41,11 +41,11 @@ label riverwalk:
         scene bg riverwalk
         show stella at head
 
-        "Stella begins her walk down the Neo Detroit riverwalk, enjoying the early autumn sun and the gentle breeze."
+        n "Stella begins her walk down the Neo Detroit riverwalk, enjoying the early autumn sun and the gentle breeze."
         
         stellan "It really is a nice day out, especially when no one is trying to talk to me."
 
-        "Stella continues her walk until reaching her usual pier."    
+        n "Stella continues her walk until reaching her usual pier."    
     
     return
 
@@ -64,7 +64,7 @@ label park:
 label cafe:
     scene bg cafe
 
-    "Stella heads to work for the day..."
+    n "Stella heads to work for the day..."
 
     return
 
