@@ -15,9 +15,9 @@ label start:
         day_skips = dict([])
         # Creates the global calendar object for a given start date.
         # Changing the day number will always be relative to this start date.
-        start_time = Time.MORNING
+        start_time = Time.EVENING
         calendar = Calendar(start_day = 8, start_month=9, start_year=2194, day_skips_dict=day_skips, start_time=start_time)
-        start_music = "morning.mp3"
+        start_music = "nostalgia.mp3"
 
         world_map = WorldMap(Location.HOME)
         location_list = get_location_list()
@@ -35,6 +35,10 @@ label first_day:
         quick_menu = False
         dream_label = f"dream_{calendar.day}"
         if renpy.has_label(dream_label):
+            renpy.scene(layer="master")
+            renpy.show("black")
+            renpy.music.play("dream.mp3", relative_volume=0.5)
+            renpy.pause(1)
             renpy.call(dream_label)
     play music start_music
     show screen day_change
