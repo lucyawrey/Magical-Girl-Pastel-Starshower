@@ -37,8 +37,8 @@ label first_day:
         if renpy.has_label(dream_label):
             renpy.scene(layer="master")
             renpy.show("black")
-            renpy.music.play("dream.mp3", relative_volume=0.5)
-            renpy.pause(1)
+            renpy.music.play("dream.mp3", relative_volume=0.6)
+            renpy.pause(0.6)
             renpy.call(dream_label)
     play music start_music
     show screen day_change

@@ -1,11 +1,27 @@
-label dream_2:
-    stellad "..."
-    stellad "I realized I never asked you what you'd like to be called."
-    stellad "So..."
+label name_input:
     python:
-        entered_name = renpy.input("What's your name", length=32)
+        entered_name = renpy.input("Give your name.", length=32)
         persistent.real_player_name = entered_name.strip()
-    stellad "[persistent.real_player_name]. I like it, and I'll be sure to remember that. Not that I wouldn't remember it if I like hated the name or something."
+    return
+
+label dream_2:
+    stellad "......"
+    if persistent.real_player_name == "":
+        stellad "I'm realizing I never asked you what I should call you."
+        stellad "So... what's going to be your name?"
+        call name_input
+        stellad "[persistent.real_player_name]. I like it, and I'll be sure to remember that. Not that I wouldn't remember it if I like hated the name or something."
+    else:
+        stellad "It's good to see you again, [persistent.real_player_name]."
+        stellad "Oh! Now that I think about it, is that something you'd still like me to call you?"
+        menu:
+            stellad "Oh! Now that I think about it, is that something you'd still like me to call you?{fast}"
+            "Yes":
+                stellad "Awesome, I guess that's it."
+            "No":
+                stellad "Oh, uh, I hope I didn't use a name you don't like to hear."
+                stellad "What name should I use instead?"
+                call name_input
     scene black
     stop music fadeout 1.0
     pause 1.0
