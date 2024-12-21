@@ -10,7 +10,7 @@ label dream_2:
         stellad "I'm realizing I never asked you what I should call you."
         stellad "So... what's going to be your name?"
         call name_input
-        stellad "[persistent.real_player_name]. I like it, and I'll be sure to remember that. Not that I wouldn't remember it if I like hated the name or something."
+        stellad "[persistent.real_player_name]. I like it, and I'll be sure to remember that. Not that I wouldn't remember it if I like hated it or something."
     else:
         stellad "It's good to see you again, [persistent.real_player_name]."
         stellad "Oh! Now that I think about it, is that something you'd still like me to call you?"
