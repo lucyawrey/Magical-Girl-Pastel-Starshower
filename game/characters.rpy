@@ -2,6 +2,9 @@
 transform head:
     align (0.5, 0.45)
 
+transform head_left:
+    align (0.3, 0.45)
+
 define textbox_name = Image("images/gui/textbox_name.png", xalign=0.5, yalign=1.0)
 define textbox = Image("images/gui/textbox.png", xalign=0.5, yalign=1.0)
 
@@ -14,4 +17,6 @@ define stellad = Character(what_color="#fdfcd2") # Stella in a dream
 define stella = Character("Stella", color="#fff704", window_background=textbox_name)
 define mgps = Character("Magical Girl Pastel Starshower", color="#fffcb0")
 define saoirse = Character("Saoirse", color="#890098")
-define mgvh = Character("Magical Girl Void Heart", color="#400147")
+define mgvh = Character("Void Heart", color="#400147", what_color="#d6d6d6", window_background=textbox_name)
+define ellie = Character("Ellie", color="#16c610", window_background=textbox_name)
+define gio = Character("Giovanni", color="#f264df", window_background=textbox_name)

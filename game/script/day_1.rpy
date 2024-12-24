@@ -1,4 +1,5 @@
 label dream_1:
+    scene black
     "You float formless in the space between."
     "You look upon a speck in that void and reach out to touch it."
     "Suddenly, light. Blinding."
@@ -12,17 +13,16 @@ label dream_1:
     pause 1.0
     return
 
-image bg cafe dark:
-    "bg cafe.jpg"
-    matrixcolor BrightnessMatrix(-0.6)
-
 label day_1:
-    scene bg cafe dark
-    show stella at head
-    "Kind Girl" "Stella, you probably don't want to sleep there all night."
+    scene black
+    show bg cafe
+    show stella at head_left
+    gio "Stella, I'm closing up and you probably don't want to sleep there all night."
     stella "Oh! Uh, I'm awake. Was just resting my head a bit."
     stella "I should probably head home and go to bed though."
-    "Kind Girl" "Right, hehe. Just stay safe okay?"
+    gio "Right. Just stay safe okay?"
+    call void_heart_story
+    stella "Well, I'm gonna head home. Thanks for listening."
 
     $ start_music = "morning.mp3"
     $ start_time = Time.MORNING
