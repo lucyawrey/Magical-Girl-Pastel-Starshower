@@ -5,8 +5,10 @@ screen calendar_overlay():
     frame:
         has vbox
         text calendar.date.strftime(f"%B {calendar.get_ordinal()} | %a")
-        text calendar.get_time() at transform:
-            xalign 1.0
+        text calendar.get_time():
+            color calendar.time.color
+            at transform:
+                xalign 1.0
 
 style calendar_overlay_frame:
     background "#00000090"
@@ -55,7 +57,7 @@ init python:
             self.day += days
             self.time = start_time
 
-        def pass_time(self, blocks: Time = Time.MORNING) -> None:
+        def pass_time(self, blocks: int) -> None:
             self.time = Time(self.time + blocks)
             if self.time > TIME_BLOCKS:
                 days = self.time // TIME_BLOCKS

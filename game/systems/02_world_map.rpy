@@ -1,5 +1,5 @@
-image selector = Transform("images/selector.svg", size=(40, 40))
-image selector_hover = Transform("images/selector light.svg", size=(60, 60))
+image selector = Transform("images/selector blue.svg", size=(50, 50))
+image selector_hover = Transform("images/selector yellow.svg", size=(60, 60))
 
 screen world_map():
     tag map
