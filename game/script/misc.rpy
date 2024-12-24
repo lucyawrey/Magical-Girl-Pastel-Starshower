@@ -3,7 +3,7 @@ label call_off:
 
 label void_heart_story:
     ellie "Wait, I still wanted to hear the story she said she was going to tell me tonight."
-    n "Stella looks over to see Ellie, the journalism student sitting at the other table."
+    n "Stella looks over to see Ellie, a journalist and acquaintance, sitting at the other table."
     stella "When did you get here?"
     ellie "While you were passed out, cutie."
     stella "Sorry."
