@@ -7,10 +7,10 @@ label name_input:
 label dream_2:
     stellad "......"
     if persistent.real_player_name == "":
-        stellad "I'm realizing I never asked you what I should call you."
-        stellad "So... what's going to be your name?"
+        stellad "I'm realizing now that I never asked you what I should call you."
+        stellad "So... what's it going to be?"
         call name_input
-        stellad "[persistent.real_player_name]. I like it, and I'll be sure to remember that. Not that I wouldn't remember it if I like hated it or something."
+        stellad "[persistent.real_player_name]. I like it, and I'll be sure to remember it. Not that I wouldn't remember if I like hated it or something."
     else:
         stellad "It's good to see you again, [persistent.real_player_name]."
         stellad "Oh! Now that I think about it, is that something you'd still like me to call you?"
@@ -22,6 +22,8 @@ label dream_2:
                 stellad "Oh, uh, I hope I didn't use a name you don't like to hear."
                 stellad "What name should I use instead?"
                 call name_input
+                stellad "Thanks."
+    stellad "See you later."
     scene black
     stop music fadeout 1.0
     pause 1.0
