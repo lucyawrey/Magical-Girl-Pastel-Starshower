@@ -75,6 +75,9 @@ define gui.name_text_font = "DejaVuSans.ttf"
 ## The font used for out-of-game text.
 define gui.interface_text_font = "DejaVuSans.ttf"
 
+# Text scale setting set in preferances screen
+default persistent.text_scale = 1.0
+
 ## The size of normal dialogue text.
 define gui.text_size = 33
 
